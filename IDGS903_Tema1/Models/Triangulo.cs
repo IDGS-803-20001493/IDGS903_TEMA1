@@ -8,19 +8,20 @@ namespace IDGS903_Tema1.Models
     public class Triangulo
     {
 
-        public int x1 { get; set; }
+        public double x1 { get; set; }
 
-        public int y1 { get; set; }
-
-
-        public int x2 { get; set; }
-
-        public int y2 { get; set; }
+        public double y1 { get; set; }
 
 
-        public int x3 { get; set; }
 
-        public int y3 { get; set; }
+        public double x2 { get; set; }
+
+        public double y2 { get; set; }
+
+
+        public double x3 { get; set; }
+
+        public double y3 { get; set; }
 
         public double Distancia1_2 { get; set; }
         public double Distancia2_3 { get; set; }
@@ -99,8 +100,29 @@ namespace IDGS903_Tema1.Models
                 else// 8 * 4 * 1 * 3 
                 {
                     this.resultado = "Triangulo Isosceles";
-                    this.Base = this.Distancia1_2;
-                    this.Altura = Math.Sqrt(Math.Pow(this.Distancia2_3, 2) - Math.Pow(this.Base / 2, 2));
+                    double ladoCalculado = 0.0;
+
+                    if (this.Distancia1_2 == this.Distancia2_3)
+                    {
+                        this.Base = this.Distancia3_1;
+
+                        this.Altura = Math.Sqrt(Math.Pow(this.Distancia2_3, 2) - Math.Pow(this.Base / 2, 2));
+                    }
+                    else if (this.Distancia2_3 == this.Distancia3_1)
+                    {
+                        this.Base = this.Distancia1_2;
+
+                        this.Altura = Math.Sqrt(Math.Pow(this.Distancia2_3, 2) - Math.Pow(this.Base / 2, 2));
+
+                    }
+                    else if (this.Distancia3_1 == this.Distancia1_2)
+                    {
+                        this.Base = this.Distancia2_3;
+                        this.Altura = Math.Sqrt(Math.Pow(this.Distancia1_2, 2) - Math.Pow(this.Base / 2, 2));
+
+                    }
+
+
                     this.area = (this.Base * this.Altura) / 2;
                 }
 
