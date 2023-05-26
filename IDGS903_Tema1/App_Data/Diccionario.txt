@@ -1,0 +1,4 @@
+Rojo,Red,
+Azul,Blue
+Amarillo,Yellow
+verde,green

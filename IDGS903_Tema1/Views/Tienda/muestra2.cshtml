@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "muestra2";
+}
+
+<h2>muestra2</h2>
+
+<h1>Datos en View Bag</h1>
+<h2>@ViewBag.saludo</h2>
+
+<h2>@ViewData["Nombre"]</h2>
+<h2>@ViewBag.nombrenuevo</h2>
+
+
+@Html.ActionLink("Ruta Nueva", "Index", "Home", null, new { miAtributo="vlor1", @class="btn btn-success"}) 
