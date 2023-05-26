@@ -78,6 +78,7 @@ namespace IDGS903_Tema1.Models
                 {
 
                     this.resultado = "Triangulo equilatero";
+
                     this.Base = this.Distancia1_2;
                     this.Altura = Math.Sqrt(Math.Pow(this.Distancia2_3, 2) - Math.Pow(this.Base / 2 , 2));
                     this.area = (this.Base * this.Altura) / 2;
